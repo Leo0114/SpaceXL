@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 interface Props {
   title: string;
@@ -13,7 +14,8 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/SpaceXL/spacex.svg" />
+    <ViewTransitions />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -22,13 +24,13 @@ const { title } = Astro.props;
     <main class="max-w-5xl px-4 mx-auto">
       <slot />
     </main>
+    <style is:global>
+      html {
+        font-family: system-ui, sans-serif;
+        background: #13151a;
+        background-size: 224px;
+        color-scheme: dark Light;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-    color-scheme: dark Light;
-  }
-</style>
