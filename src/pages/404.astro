@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import cuatro from "../assets/404.webp";
+---
+
+<Layout title="404 Not Found">
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-white text-3xl text-center py-2">
+      Esta página no existe...
+    </h1>
+    <Image
+      src={cuatro}
+      alt="its fine"
+      quality="mid"
+      format="avif"
+      class="rounded-lg"
+    />
+  </div>
+</Layout>
