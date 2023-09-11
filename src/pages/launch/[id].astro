@@ -6,7 +6,6 @@ let launch;
 if (id) {
   launch = await getLaunchBy({ id });
 }
-
 export async function getStaticPaths() {
   const launches = await getLatestLaunches();
   return launches.map((launch) => ({

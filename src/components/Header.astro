@@ -1,5 +1,6 @@
 ---
 import HeaderButton from "../components/HeaderButton.astro";
+import { Counter } from "./Counter";
 
 const navItems = [
   { title: "Últimos lanzammientos", path: "/SpaceXL/" },
@@ -17,7 +18,7 @@ const navItems = [
       All the information about SpaceX launches
     </p>
   </div>
-
+  <Counter client:visible transition:persist />
   <nav
     class="flex flex-col items-center justify-between w-full text-center md:flex-row"
   >
